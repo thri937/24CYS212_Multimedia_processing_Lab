@@ -15,4 +15,4 @@ def median_cut_quantize(input_path, output_path, num_colors):
 
 # Example usage
 num_colours=int(input("Enter No of colors to quantize:"))
-median_cut_quantize("input.jpg", "output_median_cut.jpg", num_colors)
+median_cut_quantize("input.jpg", "output_median_cut.jpg", num_colours)
