@@ -1,7 +1,7 @@
 from PIL import Image
 # This function reduces the number of colors in an image using the MEDIAN CUT method.
 
-def median_cut_quantize(input_path, output_path, num_colors=16):
+def median_cut_quantize(input_path, output_path, num_colors):
     # Open the image and ensure it is in RGB format
     img = Image.open(input_path).convert("RGB")
     # Apply PIL's built-in Median Cut quantization
@@ -14,4 +14,5 @@ def median_cut_quantize(input_path, output_path, num_colors=16):
     print("Saved quantized image:", output_path)
 
 # Example usage
-median_cut_quantize("input.jpg", "output_median_cut.jpg", num_colors=256)
+num_colours=int(input("Enter No of colors to quantize:"))
+median_cut_quantize("input.jpg", "output_median_cut.jpg", num_colors)
